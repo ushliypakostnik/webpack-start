@@ -1,0 +1,14 @@
+# dependencies
+node_modules
+.DS_Store
+
+# production
+dist
+
+# local trash
+.sass-cache
+npm-debug.log
+
+# IDEs & editors
+*.sublime-workspace
+.idea
