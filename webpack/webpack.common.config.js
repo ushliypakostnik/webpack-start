@@ -49,6 +49,6 @@ module.exports = {
       inject: true, // link css
       xhtml: true, // selfclosed tag to link css
       filename: `index.html`,
-    })
+    }),
   ],
 };
