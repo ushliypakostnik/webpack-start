@@ -31,6 +31,13 @@ module.exports = {
     ],
   },
   plugins: [
+    // html
+    new HtmlWebPackPlugin({
+      template: path.resolve(__dirname, `../src/html/index.html`),
+      inject: true, // link css
+      xhtml: true, // selfclosed tag to link css
+      filename: `index.html`,
+    }),
     // from templates
     new NunjucksWebpackPlugin({
       templates: [
@@ -42,13 +49,6 @@ module.exports = {
       configure: {
         watch: true,
       },
-    }),
-    // html
-    new HtmlWebPackPlugin({
-      template: path.resolve(__dirname, `../src/html/index.html`),
-      inject: true, // link css
-      xhtml: true, // selfclosed tag to link css
-      filename: `index.html`,
     }),
   ],
 };
