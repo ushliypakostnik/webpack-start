@@ -1,7 +1,7 @@
 Webpack/Sass/Nunjucks frontend boilerplate
 ==========================================
 
-Минимальный проект с webpack, sass и nunjucks для производства статики.
+Минимальный проект с webpack, Sass и nunjucks для производства статики.
 
 Deploy
 ------

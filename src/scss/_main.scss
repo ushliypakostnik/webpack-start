@@ -1,6 +1,19 @@
+/* Project styles */
+/* //////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// */
+
+/* Stylebase for components */
+@import "_stylebase.scss";
+
+/* App styles */
+@import "./global/_fixes.scss";
+
+/* External libraries customization */
+
+/* Test */
 .test {
-  color: #f0f;
+  color: #d930aa;
 
   /* for test autoprefixer */
-  display: flex;
+  /* display: flex */
 }
