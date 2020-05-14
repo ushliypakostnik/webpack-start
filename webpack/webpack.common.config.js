@@ -9,7 +9,7 @@ module.exports = {
   },
   module: {
     rules: [
-      // Transpiles ES6-8 into ES5
+      // transpiles ES6-8 into ES5
       {
         test: /\.js$/,
         loader: 'babel-loader',
@@ -31,6 +31,7 @@ module.exports = {
     ],
   },
   plugins: [
+    // from templates
     new NunjucksWebpackPlugin({
       templates: [
         {
@@ -42,6 +43,7 @@ module.exports = {
         watch: true,
       },
     }),
+    // html
     new HtmlWebPackPlugin({
       template: path.resolve(__dirname, `../src/html/index.html`),
       inject: true, // link css

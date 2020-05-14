@@ -15,8 +15,8 @@ module.exports = merge(common, {
   mode: 'production', // process.env.NODE_ENV
   target: 'web',
   devtool: '#source-map',
-  // Webpack 4 does not have a CSS minifier, although
-  // Webpack 5 will likely come with one
+  // webpack 4 does not have a CSS minifier, although
+  // webpack 5 will likely come with one
   optimization: {
     minimizer: [
       new UglifyJsPlugin({
@@ -30,8 +30,8 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        // Loads the javacript into html template provided.
-        // Entry point is set below in HtmlWebPackPlugin in Plugins
+        // loads the javacript into html template provided.
+        // entry point is set below in HtmlWebPackPlugin in Plugins
         test: /\.html$/,
         use: [
           {
@@ -41,8 +41,8 @@ module.exports = merge(common, {
         ],
       },
       {
-        // Loads CSS and SCSS into a file when you import it via Javascript
-        // Rules are set in MiniCssExtractPlugin
+        // loads CSS and SCSS into a file when you import it via javascript
+        // rules are set in MiniCssExtractPlugin
         test: /\.s?css$/i,
         use: [
           MiniCssExtractPlugin.loader,
@@ -54,6 +54,7 @@ module.exports = merge(common, {
     ],
   },
   plugins: [
+    // clear
     new CleanWebpackPlugin(),
     // extract css to templates
     new MiniCssExtractPlugin({

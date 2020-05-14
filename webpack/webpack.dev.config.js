@@ -21,8 +21,8 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        // Loads the javacript into html template provided.
-        // Entry point is set below in HtmlWebPackPlugin in Plugins
+        // loads the javacript into html template provided.
+        // entry point is set below in HtmlWebPackPlugin in Plugins
         test: /\.html$/,
         use: [
           {
@@ -51,7 +51,7 @@ module.exports = merge(common, {
     ],
   },
   plugins: [
-    // Stylelint
+    // stylelint
     new StyleLintPlugin({
       configFile: '.stylelintrc',
       context: 'src/scss',
