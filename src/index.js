@@ -1,8 +1,6 @@
 import './js/common';
 
-// live reload
-// comment this to production:
-// import './css/main.css';
-import './scss/_main.scss';
-
 import './assets/images/kafedra.jpg';
+
+let css;
+if (process.env.NODE_ENV === 'development') css = require('./scss/_main.scss');

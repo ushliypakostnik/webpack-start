@@ -1,6 +1,7 @@
 const merge = require('webpack-merge');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { EnvironmentPlugin } = require("webpack");
 const PATHS = require('./paths');
 const common = require('./webpack.common.config.js');
 
@@ -42,6 +43,9 @@ module.exports = merge(common, {
     }],
   },
   plugins: [
+    new EnvironmentPlugin({
+      NODE_ENV: 'production',
+    }),
     new CleanWebpackPlugin({
       cleanAfterEveryBuildPatterns: ['templates',],
     }),

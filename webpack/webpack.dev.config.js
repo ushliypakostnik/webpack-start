@@ -1,5 +1,6 @@
 const merge = require('webpack-merge');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const { EnvironmentPlugin } = require("webpack");
 const PATHS = require('./paths');
 const common = require('./webpack.common.config.js');
 
@@ -42,6 +43,9 @@ module.exports = merge(common, {
     }],
   },
   plugins: [
+    new webpack.EnvironmentPlugin({
+      NODE_ENV: 'development',
+    }),
     // stylelint
     new StyleLintPlugin({
       configFile: '.stylelintrc',
