@@ -5,8 +5,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --open --watch --mode development",
-    "build": "rm -rf dist && webpack --mode production"
+    "dev": "webpack-dev-server --config webpack/webpack.dev.config.js --watch --mode development",
+    "build": "webpack --config webpack/webpack.prod.config.js --mode production",
+    "eslint": "eslint ./webpack ./src",
+    "stylelint": "stylelint ./src/scss"
   },
   "browserslist": [
     "> 1%",
@@ -20,17 +22,27 @@
     "css-loader": "^2.1.0",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.8",
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.20.2",
     "file-loader": "^6.0.0",
-    "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.14.1",
     "nunjucks": "^3.2.0",
-    "nunjucks-webpack-plugin": "^5.0.0",
     "path": "^0.12.7",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
+    "stylelint": "^13.3.3",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "nunjucks-webpack-plugin": "^5.0.0",
+    "stylelint-webpack-plugin": "^2.0.0",
+    "webpack-merge": "^4.2.2"
   }
 }

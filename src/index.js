@@ -5,4 +5,4 @@ import './js/common';
 // import './css/main.css';
 import './scss/_main.scss';
 
-import "./assets/images/kafedra.jpg";
+import './assets/images/kafedra.jpg';
