@@ -6,6 +6,9 @@ const common = require('./webpack.common.config.js');
 
 module.exports = merge(common, {
   mode: 'production', // process.env.NODE_ENV
+  output: {
+    filename: `${PATHS.assets}/[name].min.js`,
+  },
   module: {
     rules: [{
       test: /\.scss$/,
@@ -39,9 +42,11 @@ module.exports = merge(common, {
     }],
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      cleanAfterEveryBuildPatterns: ['templates',],
+    }),
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].css`,
+      filename: `${PATHS.assets}/[name].min.css`,
     }),
   ],
 });

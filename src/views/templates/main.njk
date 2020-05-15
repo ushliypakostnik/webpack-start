@@ -1,15 +1,16 @@
-<!DOCTYPE html>
+{% import './variables.njk' as variables %}<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{% block page_title %}{% endblock %}</title>
-  <link rel="stylesheet" href="assets/css/app.css">
+
+  {% if variables.env == 'production' %}<link rel="stylesheet" href="{{ variables.assets_path }}app.min.css">{% endif %}
 </head>
 <body>
   {% block content %}{% endblock %}
 
-  <script src="assets/js/app.js"></script>
+  <script src="{{ variables.assets_path }}app{% if variables.env == 'production' %}.min{% endif %}.js"></script>
 </body>
 </html>

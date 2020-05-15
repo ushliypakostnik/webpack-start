@@ -5,6 +5,9 @@ const common = require('./webpack.common.config.js');
 
 module.exports = merge(common, {
   mode: 'development', // process.env.NODE_ENV
+  output: {
+    filename: `${PATHS.assets}/[name].js`,
+  },
   module: {
     rules: [{
       test: /\.scss$/,

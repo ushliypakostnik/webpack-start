@@ -1,6 +1,7 @@
+{% import './templates/variables.njk' as variables %}
 {% extends "./templates/main.njk" %}
 
 {% block page_title %}Page title{% endblock %}
 
 {% block content %}<div class="test">content</div>
-  <img src="assets/images/kafedra.jpg" />{% endblock %}
+  <img src="{{ variables.image_path }}kafedra.jpg" />{% endblock %}

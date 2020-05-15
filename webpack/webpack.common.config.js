@@ -10,7 +10,6 @@ module.exports = {
     app: PATHS.src,
   },
   output: {
-    filename: `${PATHS.assets}js/[name].js`,
     path: PATHS.dist,
     publicPath: '/',
   },
