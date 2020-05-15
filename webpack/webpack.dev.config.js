@@ -8,6 +8,9 @@ module.exports = merge(common, {
   output: {
     filename: `${PATHS.assets}/[name].js`,
   },
+  optimization: {
+    minimize: false
+  },
   module: {
     rules: [{
       test: /\.scss$/,
