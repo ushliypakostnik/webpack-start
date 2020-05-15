@@ -1,9 +1,0 @@
-plugins:
-  - babel
-globals:
-  window: true
-  console: true
-extends:
-  - 'airbnb-base'
-rules:
-  no-console: off
