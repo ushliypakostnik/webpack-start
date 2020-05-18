@@ -43,7 +43,7 @@ module.exports = merge(common, {
     }],
   },
   plugins: [
-    new webpack.EnvironmentPlugin({
+    new EnvironmentPlugin({
       NODE_ENV: 'development',
     }),
     // stylelint
