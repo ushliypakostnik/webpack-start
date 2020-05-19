@@ -28,7 +28,7 @@ module.exports = {
         options: {
           name: '[path][name].[ext]',
           context: PATHS.src,
-          esModule: false, // for fix paths to in css images
+          esModule: false, // for fix paths to css images
         },
       },
     }],
