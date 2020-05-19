@@ -28,6 +28,7 @@ module.exports = {
         options: {
           name: '[path][name].[ext]',
           context: PATHS.src,
+          esModule: false, // fix for image paths
         },
       },
     }],
