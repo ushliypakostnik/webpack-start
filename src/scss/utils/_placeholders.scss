@@ -8,12 +8,26 @@
 }
 
 %container {
-  padding-left: 10vw;
-  padding-right: 10vw;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  max-width: $container__width--lg;
+
+  @include md {
+    max-width: $container__width--md;
+  }
+
+  @include sm {
+    padding-left: $gutter * 2;
+    padding-right: $gutter * 2;
+  }
+
+  @include gadgets {
+    max-width: 100%;
+  }
 
   @include xs {
-    padding-left: $gutter;
-    padding-right: $gutter;
+    padding-left: $gutter / 2;
+    padding-right: $gutter / 2;
   }
 }
 

@@ -30,6 +30,12 @@
   }
 }
 
+@mixin md-and-sm {
+  @media only screen and (min-width: $breackpoints__sm) and (max-width: $breackpoints__md_max) {
+    @content;
+  }
+}
+
 @mixin sm {
   @media only screen and (min-width: $breackpoints__sm) and (max-width: $breackpoints__sm_max) {
     @content;
@@ -188,17 +194,17 @@
   }
 }
 
-@mixin btn-transparent($colors) {
+@mixin btn-transparent($color) {
   background-color: transparent;
-  color: $colors;
-  border: $border-width solid $colors;
+  color: $color;
+  border: $border-width solid $color;
   will-change: border-color;
   @include transitions(all);
 
   &:hover,
   &:active,
   &:focus {
-    color: $colors;
+    color: $color;
     transform: translateY(-1 * $translate-size);
     background: $colors--white_lighten;
 
@@ -210,18 +216,18 @@
 
 
 // Links
-@mixin link-color($colors, $colors-hover) {
+@mixin link-color($color, $color-hover) {
   will-change: color;
   @include transitions(color);
 
   &,
   &:focus {
-    color: $colors;
+    color: $color;
   }
 
   &:hover,
   &:active {
-    color: $colors-hover;
+    color: $color-hover;
   }
 }
 

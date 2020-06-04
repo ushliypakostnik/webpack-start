@@ -93,7 +93,7 @@ $colors__text: #575757;
 // Links
 
 $colors__link: $colors__primary;
-$colors__link--hover: darken(#44529c, $fade);
+$colors__link--hover: darken($colors__primary, $fade);
 
 
 // Borders and shadows
@@ -129,3 +129,6 @@ $breackpoints__lg:                  1240px;
 $breackpoints__xs_max:              ($breackpoints__sm - 1);
 $breackpoints__sm_max:              ($breackpoints__md - 1);
 $breackpoints__md_max:              ($breackpoints__lg - 1);
+
+$container__width--lg: 1020px + ($gutter * 2);
+$container__width--md: 880px + ($gutter * 2);
