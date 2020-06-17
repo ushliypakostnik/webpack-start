@@ -28,13 +28,13 @@ const redraw = () => {
     redraw();
   });
 
-  window.addEventListener("load", (event) => {
+  window.addEventListener('load', (event) => {
     // console.log('event: window load');
 
     redraw();
   });
 
-  window.addEventListener("resize", (event) => {
+  window.addEventListener('resize', (event) => {
     // console.log('event: window resize');
 
     redraw();
