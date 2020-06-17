@@ -25,7 +25,7 @@ const redraw = () => {
       });
     }); */
 
-    // redraw();
+    redraw();
   });
 
   window.addEventListener("load", (event) => {
